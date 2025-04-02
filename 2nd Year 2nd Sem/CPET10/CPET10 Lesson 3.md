@@ -85,3 +85,23 @@ PROCESS SCHEDULING
 		v. Priority Based Scheduling
 	
 	III. Medium-Term Scheduler- The medium-term scheduler is part of the OS scheduler that manages the resources (more specifically the RAM) of a given system in managing processes going to and fro sa secondary memory to primary RAM memory. The medium term scheduler acts as the intermediary between the primary memory (RAM which in this context is called 'resource') and the secondary memory of a given system. Siya usually nagmamanage ng mga blocked or waiting process. If the RAM is full or if they will cause problems to resource utilization ng other processes, the medium term scheduler intermediates the processes to be transfered to RAM or RAM back to the secondary memory to save resources. because of this, the medium-term scheduler also sets the priority of each process to be stored sa RAM for eventual execution by the CPU. 
+	
+	- An example of this scheduler in execution is a process waiting for an I/O event. If a process requires an I/O event that prevents it from further processing by the CPU, the CPU scheduler (from the ALU) brings the process to RAM then the mid-term scheduler brings the instance of a process and saves it into the secondary memory so that RAM can be utilized by other processes that need it. If I/O event occurs, the "waiting" condition is fulfilled the state becomes ready. The mid-term scheduler brings the process to RAM then it waits for its term for execution again to the CPU brought upon by the CPU scheduler of the OS, located by the BIU through protected mode segmentation and paging.
+
+MULTITASKING IN MOBILE SYSTEMS
+- On mobile systems, due to "Screen Real Estate" (defined as the number of 'windows' a screen can show) (which in this case is limited), mobile systems are limited on showing their multitasking prowess. There are two main processes in a mobile system:
+
+1. Foreground Process- One that is interactable by the user.
+2. Background Process- Self-explanatory. Siya usually ung nasa task manager ng phone mo.
+
+OPERATIONS ON PROCESS
+- An OS should provide mechanisms for the following, "must-have" functionalities:
+
+	1. Process Creation- When a process is created, there will be instances where a "main process" will create a process within it. In this instance, the main process becomes "Parent Process" and the process that springs from it becomes a "Child Process." The process of creating a child process from their parent process is called "fork()". fork() is a system call which creates a close duplicate (or not at all) of a parent process. These processes have their own PCBs. When a child process is created, it may inherit all, some, or none of the parent's resources (Resources may include RAM allocation, file descriptors (files utilized by the process), or communication mechanisms). Do take not that because there are instances that children processes acquire some or none of the attributes or resources of the parent process, they may operate on different memory spaces. Because of this, the Interprocess Communication (IPC) is needed so that different children processes can talk to their respective parent processes respectively to synchronize themselves to them.  
+	   
+	2. Program Termination/Execution- In the context of Parent and Child Processes, the OS can either make the processes' relation so that they can terminate independently, or pwedeng hintayan (parent process waits for children processes to terminate before it terminates). When a child process is to be terminated, a system call exit() is sent to process mode 1 and data is returned to the parent process. If resources are scarce and a process has exceeded allocated resources, the "abort()" abort system call is sent to process mode 1. Since Parent and Child Process Model is heirarchal, when a parent process is terminated, all children processes are terminated as well. This phenomena is called "Cascading Termination."
+	
+	- As stated earlier, the IPC is a methodology utilized by the Parent and Child Process Model in order to facilitate communication between process types in order to synchronize and work together efficiently. With that in mind, there are two modes of IPC in which the process model can utilize:
+	
+		1. Shared Memory- 
+		   ![[Pasted image 20250402225405.png]]
