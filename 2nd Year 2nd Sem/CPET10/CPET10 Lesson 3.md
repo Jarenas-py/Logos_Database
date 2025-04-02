@@ -72,4 +72,16 @@ PROCESS SCHEDULING
 			D. Round Robin
 			E. Multilevel Queue
 			F. Thread Scheduling (Preemptive Version)
-
+			G. Rate Montonic Scheduling
+			H. Earliest Deadline First (EDF) Scheduling
+			I. Proportional Share Scheduling
+	
+	- There are other CPU Schedulers that can be both preemptive or non-preemptive depending on how they are implemented based on their algorithm:
+		
+		i. Thread Scheduling
+		ii. PThread Scheduling
+		iii. Multiple Processor Scheduling
+		iv. Real-Time CPU Scheduling
+		v. Priority Based Scheduling
+	
+	III. Medium-Term Scheduler- 
