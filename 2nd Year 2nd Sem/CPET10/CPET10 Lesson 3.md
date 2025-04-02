@@ -103,5 +103,5 @@ OPERATIONS ON PROCESS
 	
 	- As stated earlier, the IPC is a methodology utilized by the Parent and Child Process Model in order to facilitate communication between process types in order to synchronize and work together efficiently. With that in mind, there are two modes of IPC in which the process model can utilize:
 	
-		1. Shared Memory- 
+		1. Shared Memory- The shared memory methodology of IPC utilizes a "Shared Memory" in RAM for differing process to utilize in order to communicate. By default, process a and process b has different memory addresses and because of that, how can these two processes communicate with each other? The IPC allocates a "Shared Memory Address" for both of the processes to access and utilize as communication between the two processes. Because of this 
 		   ![[Pasted image 20250402225405.png]]
