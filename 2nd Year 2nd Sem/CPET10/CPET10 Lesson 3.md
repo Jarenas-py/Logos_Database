@@ -11,7 +11,7 @@ PROCESS
 		iv. Heap- Part of the process that requests for more memory during runtime. When the process needs more memory (RAM) during run time, the heap requests for more memory which sends this interrupt to the API for system call conversion. Process mode bit goes high and OS gives a memory address back to the API so that the heap of the process is given more memory which can be accessed through the memory address provided by the OS.
 	II. Protected Mode- Limit, Base, Access Rights
 
-- A program is passive which means it is stored in secondary memory. When it is to be executed, it becomes an active site called  process which is now stored in RAM waiting for CPU resource for execution.
+- A program is passive which means it is stored in secondary memory. When it is to be executed, it becomes an active site called  process which is now stored in RAM waiting for CPU resource for execution. 
 
 PROCESS STATE
 - State ng process with regards to it's event
@@ -103,5 +103,5 @@ OPERATIONS ON PROCESS
 	
 	- As stated earlier, the IPC is a methodology utilized by the Parent and Child Process Model in order to facilitate communication between process types in order to synchronize and work together efficiently. With that in mind, there are two modes of IPC in which the process model can utilize:
 	
-		1. Shared Memory- The shared memory methodology of IPC utilizes a "Shared Memory" in RAM for differing process to utilize in order to communicate. By default, process a and process b has different memory addresses and because of that, how can these two processes communicate with each other? The IPC allocates a "Shared Memory Address" for both of the processes to access and utilize as communication between the two processes. Because of this 
+		1. Shared Memory- The shared memory methodology of IPC utilizes a "Shared Memory" in RAM for differing process to utilize in order to communicate. By default, process a and process b has different memory addresses and because of that, how can these two processes communicate with each other? The IPC allocates a "Shared Memory Address" for both of the processes to access and utilize as communication between the two processes. Because of this process a and process b has a secured memory space, only communicating through the aforementioned shared memory.
 		   ![[Pasted image 20250402225405.png]]
