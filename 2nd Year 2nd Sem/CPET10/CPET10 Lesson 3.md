@@ -50,20 +50,26 @@ PROCESS SCHEDULING
 	II. Ready Queue- All processes ready for execution in the RAM.
 	III. Device Queue- Processes that are waiting for an I/O event. 
 
-- Process Scheduling has two categories namely:
-
-	I. Non-Preemptive- A process cannot be executed if the current process being executed is not in waiting or terminated state
-	II. Preemptive- Process execution and CPU allocation is based on the criticality and importance of that process.
-
 - Process scheduling also has types namely:
 
-	I. Long Term/ Job Scheduler- Works in tandem with the Short Term Scheduler in setting up and executing processes. The process of a long term scheduler is as follows: Alam naman natin the the secondary memory is a pool of programs stored within it. When a process is to be executed, kinukuha long term scheduler ung program na un based on its importance and cricticality on what is called a "Job Pool" within the secondary memory. And then dinadala iya ito a RAM to be queued by the Short term scheduler. The long term scheduler places process into RAM based on its efficiency (referencing on the i/o and the CPU bound execution time of a process). Furthermore, this type of scheduling follows the degree of multiprogramming which refers to the balance of setting up processes in a ready state in the RAM. If masyadong unti ng processes, each clock pulse of a processor is wasted. If masyadong madami, too much context switching occurs, slowing down the time it takes to complete a process til termination.
+	I. Long Term/ Job Scheduler- Works in tandem with the Short Term Scheduler in setting up and executing processes. The process of a long term scheduler is as follows: Alam naman natin the the secondary memory is a pool of programs stored within it. When a process is to be executed, kinukuha long term scheduler ung program na un based on its importance and cricticality on what is called a "Job Pool" within the secondary memory. And then dinadala niya ito sa RAM to be queued by the Short term scheduler. The long term scheduler places process into RAM based on its efficiency (referencing on the i/o and the CPU bound execution time of a process). Furthermore, this type of scheduling follows the degree of multiprogramming which refers to the balance of setting up processes in a ready state in the RAM. If masyadong unti ng processes, each clock pulse of a processor is wasted. If masyadong madami, too much context switching occurs, slowing down the time it takes to complete a process til termination.
+	
 	II. Short Term/ CPU Scheduler- Scheduling techniques utilized by the processor in actually executing processes from RAM and allocating proper time for each process to enable the illusion of multitasking. The short term scheduler utilizes a dispatcher when doing its tasks. The dispatcher does the following stuff in a short term scheduler: a. does the context switching and b. changing dual mode operation.
-	- A short term scheduler has two categories in executing processes in RAM
+	- A short term scheduler has two categories in executing processes in RAM (note that the descriptions of different non-preemptive and preemptive scheduling will be further discussed on another lesson):
 
-		i. Non-Preemptive
-		ii. Preemptive
+		i. Non-Preemptive- Pinapatapos muna ng OS na either mag-terminate, or waiting state ung isang process before siya mag-assign ng isa pang process from the RAM to be executed sa EU ng CPU. Because of this, hindi based sa "priority" or "criticality" and pag-assign ng OS ng processes from RAM to CPU. There are different types of Non-preemptive CPU scheduling:
+		
+			A. First Come First Serve (FCFS)
+			B. Shortest Job First (SJF)
+			C. Priority Scheduling (Non-Preemptive Version)
+			D. Thread Scheduling (Non-Preemptive Version)
+	
+		ii. Preemptive- Unlike sa Non-Preemptive, a preemptive CPU scheduler bases is process assignment based on its priority, criticality, and how efficient the system will run as a whole. It does not "wait" for a process to go into terminated or waiting state. If there is an interrupt, it will context switch the existing process immediately in order to execute the interrupt. 
 
-			A. Priority Scheduling- processor picks processes by its priority
-			B. 
+			A. Priority Scheduling
+			B. Shortest Remaining Time First
+			C. Priority Scheduling (Preemptive Version)
+			D. Round Robin
+			E. Multilevel Queue
+			F. Thread Scheduling (Preemptive Version)
 
