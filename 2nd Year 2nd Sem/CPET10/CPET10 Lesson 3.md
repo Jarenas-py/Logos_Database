@@ -108,3 +108,14 @@ OPERATIONS ON PROCESS
 		2. Messaging Passing- On cluster computer systems, shared memory is not suitable since not all system share the same RAM. With that in mind, the message passing methodology holds effective in this context. 
 		![[Pasted image 20250403070807.png]]
 		- In message passing, each process has a message and is stored in kernel in order to facilitate communication. Alternatively, the message of each process can be sent to their respective process. With that in mind, direct communication between two processes is possible.
+		
+	- A process maybe the following types:
+	1. Cooperating Process- Just like one of the resource sharing options of Parent and Child Process model, the cooperating process shares resources with other processes. It can be fully or some of it resources shared.
+	2. Independent Process- Self-explanatory. Akin to the resource option of parent and child process model wherein no resources are shared between parent and child.
+	
+	- Through these models, certain situations may arise wherein process synchronization may fail or slow down. Although this is to be discussed on further lessons, the "Producer-Consumer Problem" in processes can occur in sprcific circumstances. The description is as follows:
+	- A Producer-Consumer Problem is a process synchronization issue in an OS wherein 
+	
+
+
+
