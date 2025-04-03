@@ -106,9 +106,25 @@ OPERATIONS ON PROCESS
 		1. Shared Memory- The shared memory methodology of IPC utilizes a "Shared Memory" in RAM for differing process to utilize in order to communicate. By default, process a and process b has different memory addresses and because of that, how can these two processes communicate with each other? The IPC allocates a "Shared Memory Address" for both of the processes to access and utilize as communication between the two processes. Because of this process a and process b has a secured memory space, only communicating through the aforementioned shared memory.
 		   ![[Pasted image 20250402225405.png]]
 		2. Messaging Passing- On cluster computer systems, shared memory is not suitable since not all system share the same RAM. With that in mind, the message passing methodology holds effective in this context. 
+<<<<<<< HEAD
 		   
 		   ![[Pasted image 20250403161907.png]]
 		
 		- In message passing, each process has a message and is stored in kernel in order to facilitate communication. Alternatively, the message of each process can be sent to their respective process. With that in mind, direct communication between two processes is possible.
 		  
 	
+=======
+		![[Pasted image 20250403070807.png]]
+		- In message passing, each process has a message and is stored in kernel in order to facilitate communication. Alternatively, the message of each process can be sent to their respective process. With that in mind, direct communication between two processes is possible.
+		
+	- A process maybe the following types:
+	1. Cooperating Process- Just like one of the resource sharing options of Parent and Child Process model, the cooperating process shares resources with other processes. It can be fully or some of it resources shared.
+	2. Independent Process- Self-explanatory. Akin to the resource option of parent and child process model wherein no resources are shared between parent and child.
+	
+	- Through these models, certain situations may arise wherein process synchronization may fail or slow down. Although this is to be discussed on further lessons, the "Producer-Consumer Problem" in processes can occur in sprcific circumstances. The description is as follows:
+	- A Producer-Consumer Problem is a process synchronization issue in an OS wherein 
+	
+
+
+
+>>>>>>> origin/main
