@@ -106,5 +106,9 @@ OPERATIONS ON PROCESS
 		1. Shared Memory- The shared memory methodology of IPC utilizes a "Shared Memory" in RAM for differing process to utilize in order to communicate. By default, process a and process b has different memory addresses and because of that, how can these two processes communicate with each other? The IPC allocates a "Shared Memory Address" for both of the processes to access and utilize as communication between the two processes. Because of this process a and process b has a secured memory space, only communicating through the aforementioned shared memory.
 		   ![[Pasted image 20250402225405.png]]
 		2. Messaging Passing- On cluster computer systems, shared memory is not suitable since not all system share the same RAM. With that in mind, the message passing methodology holds effective in this context. 
-		![[Pasted image 20250403070807.png]]
+		   
+		   ![[Pasted image 20250403161907.png]]
+		
 		- In message passing, each process has a message and is stored in kernel in order to facilitate communication. Alternatively, the message of each process can be sent to their respective process. With that in mind, direct communication between two processes is possible.
+		  
+	
