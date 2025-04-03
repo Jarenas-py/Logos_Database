@@ -97,34 +97,33 @@ MULTITASKING IN MOBILE SYSTEMS
 OPERATIONS ON PROCESS
 - An OS should provide mechanisms for the following, "must-have" functionalities:
 
-	1. Process Creation- When a process is created, there will be instances where a "main process" will create a process within it. In this instance, the main process becomes "Parent Process" and the process that springs from it becomes a "Child Process." The process of creating a child process from their parent process is called "fork()". fork() is a system call which creates a close duplicate (or not at all) of a parent process. These processes have their own PCBs. When a child process is created, it may inherit all, some, or none of the parent's resources (Resources may include RAM allocation, file descriptors (files utilized by the process), or communication mechanisms). Do take not that because there are instances that children processes acquire some or none of the attributes or resources of the parent process, they may operate on different memory spaces. Because of this, the Interprocess Communication (IPC) is needed so that different children processes can talk to their respective parent processes respectively to synchronize themselves to them.  
+	1. Process Creation- When a process is created, there will be instances where a "main process" will create a process within it. In this instance, the main process becomes "Parent Process" and the process that springs from it becomes a "Child Process." The process of creating a child process from their parent process is called "fork()". fork() is a system call which creates a close duplicate (or not at all) of a parent process. These processes have their own PCBs. When a child process is created, it may inherit all, some, or none of the parent's resources (Resources may include RAM allocation, file descriptors (files utilized by the process), or communication mechanisms). Do take note that because there are instances that children processes acquire some or none of the attributes or resources of the parent process, they may operate on different memory spaces. Because of this, the Interprocess Communication (IPC) is needed so that different children processes can talk to their respective parent processes respectively to synchronize themselves to them.  
 	   
 	2. Program Termination/Execution- In the context of Parent and Child Processes, the OS can either make the processes' relation so that they can terminate independently, or pwedeng hintayan (parent process waits for children processes to terminate before it terminates). When a child process is to be terminated, a system call exit() is sent to process mode 1 and data is returned to the parent process. If resources are scarce and a process has exceeded allocated resources, the "abort()" abort system call is sent to process mode 1. Since Parent and Child Process Model is heirarchal, when a parent process is terminated, all children processes are terminated as well. This phenomena is called "Cascading Termination."
 	
-	- As stated earlier, the IPC is a methodology utilized by the Parent and Child Process Model in order to facilitate communication between process types in order to synchronize and work together efficiently. With that in mind, there are two modes of IPC in which the process model can utilize:
+	- As stated earlier, the IPC is a methodology utilized by the Parent and Child Process Model in order to facilitate communication between process types in order to synchronize and work together efficiently. In an IPC, one must be familiarized with these terms first:
+	  
+	- A process may be the following types:
+	1. **Cooperating Process**- Just like one of the resource sharing options of Parent and Child Process model, the cooperating process shares resources with other processes. It can be fully or some of it resources shared. In the case of parent and children processes, both processes are cooperating processes as they share resources especially in facilitating communication since shared memory is utilized in order to facilitate communication between these processes and synchronize with each other.
+	2. **Independent Process**- Self-explanatory. Akin to the resource option of parent and child process model wherein no resources are shared between parent and child.
+	   
+	- With that in mind, there are two modes of IPC in which the process model can utilize:
 	
-		1. Shared Memory- The shared memory methodology of IPC utilizes a "Shared Memory" in RAM for differing process to utilize in order to communicate. By default, process a and process b has different memory addresses and because of that, how can these two processes communicate with each other? The IPC allocates a "Shared Memory Address" for both of the processes to access and utilize as communication between the two processes. Because of this process a and process b has a secured memory space, only communicating through the aforementioned shared memory.
+		1. **Shared Memory**- The shared memory methodology of IPC utilizes a "Shared Memory" in RAM for differing process to utilize in order to communicate. By default, process a and process b has different memory addresses and because of that, how can these two processes communicate with each other? The IPC allocates a "Shared Memory Address" for both of the processes to access and utilize as communication between the two processes. Because of this process a and process b has a secured memory space, only communicating through the aforementioned shared memory.
 		   ![[Pasted image 20250402225405.png]]
-		2. Messaging Passing- On cluster computer systems, shared memory is not suitable since not all system share the same RAM. With that in mind, the message passing methodology holds effective in this context. 
-<<<<<<< HEAD
+		2. **Messaging Passing**- On cluster computer systems, shared memory is not suitable since not all system share the same RAM. With that in mind, the message passing methodology holds effective in this context. 
+
 		   
 		   ![[Pasted image 20250403161907.png]]
 		
-		- In message passing, each process has a message and is stored in kernel in order to facilitate communication. Alternatively, the message of each process can be sent to their respective process. With that in mind, direct communication between two processes is possible.
-		  
+		- In message passing, each process has a message and is stored in kernel in order to facilitate communication. Alternatively, the message of each process can be sent to their respective process. With that in mind, direct communication between two processes is possible. 
 	
-=======
-		![[Pasted image 20250403070807.png]]
-		- In message passing, each process has a message and is stored in kernel in order to facilitate communication. Alternatively, the message of each process can be sent to their respective process. With that in mind, direct communication between two processes is possible.
-		
-	- A process maybe the following types:
-	1. Cooperating Process- Just like one of the resource sharing options of Parent and Child Process model, the cooperating process shares resources with other processes. It can be fully or some of it resources shared.
-	2. Independent Process- Self-explanatory. Akin to the resource option of parent and child process model wherein no resources are shared between parent and child.
+	- Through these models, certain situations may arise wherein process synchronization may fail or slow down. Although this is to be discussed on further lessons, the "Producer-Consumer Problem" in processes can occur in specific circumstances. The description is as follows:
+	- A Producer-Consumer Problem is a process synchronization issue in an OS wherein the producer process cannot fit anymore processes or data to be accessed by the consumer process given a buffer. In this context, producer and consumer are processes that talk to each other. From the name alone, the producer process 'produces' stuff that the consumer process utilizes for their different functionalities. The buffer stated earlier is a portion of RAM or memory address allocated to the producer and consumer process so that they can facilitate communication with each other and exchange data for the benefit of their respective process. Because of this, the producer and consumer processes can be related to IPC as they actually utilize IPC (either of the two methodologies). 
+	- In a producer-consumer problem, the buffer is limited (bounded) and if mabagal mag consume ng data ung consumer process, the producer process would run out of space to put in the buffer, essentially halting the producer process of its functionalities kasi di na siya makakapaglapag ng data sa buffer. This creates the producer-consumer problem. 
+	  
+	- There are two types of buffers:
+			1. Bounded-Buffer- Limited Buffer.
+			2. Unbounded Buffer- Unli buffer.
+
 	
-	- Through these models, certain situations may arise wherein process synchronization may fail or slow down. Although this is to be discussed on further lessons, the "Producer-Consumer Problem" in processes can occur in sprcific circumstances. The description is as follows:
-	- A Producer-Consumer Problem is a process synchronization issue in an OS wherein 
-	
-
-
-
->>>>>>> origin/main
