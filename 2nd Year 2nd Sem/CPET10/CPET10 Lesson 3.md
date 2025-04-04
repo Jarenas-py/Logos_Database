@@ -122,10 +122,10 @@ OPERATIONS ON PROCESS
 				A. **Blocking Send**- A sender process cannot send a message to the receiver unless the receiver has received and successfully processed the sender's previous message.
 				B. **Blocking Receive**- A receiver process is blocked until a sender process is successfully connected to it.
 			
-			2. Non-Blocking- A process is independent to their respective sender or receiver process with respect to sending and receiving data. 
+			2. **Non-Blocking**- A process is independent to their respective sender or receiver process with respect to sending and receiving data. 
 			   
-				A. Non-Blocking Send- Sender process sends and sends messages to the receiver (may lead to problem consumer problem).
-				B. Non-Blocking Receive- The receiver process receives and receives messages from either a mailbox or in the shared memory even tho null siya. Like halimbawa kung wala namang message nilapag si sender process sa mailbox or shared memory, kukuha parin si receiver process ng message. Null nga lang ung message. Its like a letter pero papel lang sya, walang nakasulat sa loob. 
+				A. **Non-Blocking Send**- Sender process sends and sends messages to the receiver (may lead to problem consumer problem).
+				B. **Non-Blocking Receive**- The receiver process receives and receives messages from either a mailbox or in the shared memory even tho null siya. Like halimbawa kung wala namang message nilapag si sender process sa mailbox or shared memory, kukuha parin si receiver process ng message. Null nga lang ung message. Its like a letter pero papel lang sya, walang nakasulat sa loob. 
 		
 	- Within IPC's methodologies of process data exchange, there are two types of communication techniques:
 		1. **Direct Communication**- Self-explanatory. Utilizes the system calls "send()" and "receive()." In IPC shared memory, direct communication is facilitated on the shared memory itself. The Sender process gets the memory address in the shared address of the receiver process and the PID of the receiver process as well from it's PCB. Then the system call is executed. You know what happens kapag sa message passing IPC model.
@@ -136,7 +136,19 @@ OPERATIONS ON PROCESS
 	- In a producer-consumer problem, the buffer is limited (bounded) and if mabagal mag consume ng data ung consumer process, the producer process would run out of space to put in the buffer, essentially halting the producer process of its functionalities kasi di na siya makakapaglapag ng data sa buffer. This creates the producer-consumer problem. 
 	  
 	- There are two types of buffers:
-			1. Bounded-Buffer- Limited Buffer.
-			2. Unbounded Buffer- Unli buffer.
+			1. **Bounded-Buffer**- Limited Buffer.
+			2. **Unbounded Buffer**- Unli buffer.
 
-	
+EXAMPLES OF IPC SYSTEMS
+
+1. **Local Procedure Call**- Given a local clustered system, it is evident that memory is not shared. Because of this, IPC systems should need to be put in place para ung process sa isang system ay pwedeng makipag-usap sa process sa isa pang system. The LPC was a technology developed by windows in order to for processes in different computers in a local setting to talk to each other. In the case of local procedure call, there are two clients (sender and receiver), and a server. These are all connected by ports and sockets. In this IPC system, there are two steps in achieving communication:
+   
+   i. The data to be sent is processed.
+   ii. The second mechanism in a LPC is sockets and ports wherein in a local setting, ito ung paraan ng mga computers for their respective processes to send and receive data.
+
+2. **Remote Procedure Call**- next time nigger.
+
+**CLIENT-SERVER SYSTEMS**
+- Self-explanatory. They have different parts:
+
+1. **Sockets**-  
