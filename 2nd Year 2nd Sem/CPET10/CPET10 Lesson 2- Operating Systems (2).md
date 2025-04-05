@@ -1,5 +1,3 @@
-CPET10 Lesson 2
-
 OS SERIVCES
 - Refers to the services that an OS provides to the user in order for the user to either properly navigate the services of the OS or the OS executing the task given by the user. These can be the following:
 
