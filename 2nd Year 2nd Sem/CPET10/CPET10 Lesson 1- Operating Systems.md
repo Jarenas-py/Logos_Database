@@ -103,7 +103,7 @@ PROCESS AND THREADS
 
 - There are two types of processes:
 
-	I. Single-Threaded Process- Refers to a process containing only one thread. Because it only has one thread, it only has one program counter. The program counter is defined as a data struct that contains which instruction is to be executed next inside a given thread in a process.
+	I. Single-Threaded Process- Refers to a process containing only one thread. Because it only has one thread, it only has one program counter (IP). The program counter (IP) is defined as a data struct that contains which instruction is to be executed next inside a given thread in a process.
 	II. Multi-Threaded Process- Refers to a process containing multiple threads (for example a program counter loads the video and handles user input as well (v games)). Because it has multiple threads, it also has multiple program counters with respect to the number of threads it has. 
 
 MEMORY, STORAGE, AND MASS-STORAGE MEMORY MANAGEMENT
