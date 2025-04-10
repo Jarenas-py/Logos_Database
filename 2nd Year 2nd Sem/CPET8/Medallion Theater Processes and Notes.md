@@ -29,7 +29,7 @@
 	- Modify Existing Schedules
 	- Update Seat Availability
 
-# Data Points
+# Data Flows
 - Booking Request ✅
 - Online Payment ✅
 - Booking Cancellation ✅
@@ -47,6 +47,14 @@
 - Cancellation Notice ✅
 - Money Refund ✅
 - Database Updates ✅
+- Received Cancellation Request ✅
+
+# New Data Flows
+- Seat Availability 
+- Confirmed Booking
+- Booking Information
+- Record Payment
+- Payment Information
 
 # Level 1 DFD
 ![[Pasted image 20250410094910.png]]
