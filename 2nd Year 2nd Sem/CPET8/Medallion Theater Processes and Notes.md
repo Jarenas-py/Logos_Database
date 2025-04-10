@@ -61,3 +61,25 @@
 
 # Level 2 DFD Part 1
 ![[Pasted image 20250410094754.png]]
+
+# Use Case Diagram Notes for Medallion Theatre
+**Actors**:
+1. User
+2. Virtual Cashier
+3. Admin
+
+**Relationships**:
+1. User
+	a. Online Payment
+	b. Booking 
+	c. Cancellations
+
+2. Virtual Cashier
+	a. Online Payment
+	b. Refunds (?)
+
+3. Admin (Generalization of Virtual Cashier?)
+	a. Update Booking Records
+	b. Set Theatre Schedules
+	c. Seat Availability
+	d. Cancellation (?)
