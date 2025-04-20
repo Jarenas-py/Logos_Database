@@ -78,3 +78,15 @@
 		 - The completion time is acquired by the time of the last instance of a process before it is terminated in the Gantt Chart.
 		 - TAT and WT calculation is still the same.
 		
+	3. **Round-Robin**
+		- Utilizes the schedulers time slice in order to context switch to the next process to be executed as well as scheduled for execution.
+		- Example:
+		![[Pasted image 20250421000937.png]]
+		![[Pasted image 20250421000950.png]]
+		- **First Iteration:** With a time slice of 10, P3 comes first since it is the first process to arrive. Since time slice is 10, its burst time is reduced to 10 and is practically finished execution.
+		- **Second Iteration:** By time 10, multiple processes have arrived at queue. In RR, one should take note that another scheduler which is more akin to an instruction pointer is also created as a guide for what process next to execute. It will be shown in this iteration and how to utilize it.
+			- The second chart/scheduler utilized for RR is based on the arrival time of the processes. In this case, now with the terminated P3, it is P2 P1 P4 P5. With that in mind, P2 is next executed. Its time slice is reduced to 15 and finishes initially at time 20. The second scheduler is rearranged with the newly executed process moving to the last of the list hence the list being P1 P4 P5 P2.
+		- **Third Iteration:** P1 is executed next. Its burst time is reduced to 20 and finishes on time 30. The list is rearranged into P4 P5 P2 P1.
+		- This continues until no other process is to be executed further.
+		- The completion time is acquired by the time of the last instance of a process before it is terminated in the Gantt Chart.
+		- TAT and WT calculation is still the same.
