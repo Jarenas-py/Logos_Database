@@ -54,7 +54,7 @@ Note: The toquartileresult variable is called out by the self.easeit.clicked.con
 
 - **Step 9:** In the results method (show_quartile_result), use .setText() for the attribute shown in the separate GUI python file for your statistics result to show the output calculation. In the case of the example, quartilevalue and summary attributes from QuartileResult were utilized.
 
-- **Step 10:** Saving the input values. 
+- **Step 10:** Saving the input values kapag nag back or nag easeit si user.
   
 def back(self):
         goback = Quartile(self.widget, insert attributes of inputs)
@@ -65,3 +65,5 @@ def gotoeaseitagain(self):
         toeaseitagain = Quartile(self.widget, insert attributes of inputs)
         self.widget.addWidget(toeaseitagain)
         self.widget.setCurrentIndex(self.widget.currentIndex() + 1)
+
+- **Step 11:** Do the same methodologies employed from results class to output the solution. Do not forget to insert the values for the parameters of the instance classes on the back and gotoeaseitagain methods.
