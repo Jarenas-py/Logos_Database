@@ -17,5 +17,51 @@
 - The text() method from the QLineEdit class in PyQt helps in acquiring the actual input of the user stored in both self.barcategories and self.barvalues in BarChart.py. 
 
 	## Input Error Checking:
-	- 
 
+
+
+# NEW NOTES
+
+- **Step 1**: Check if GUI Python files have been imported on STATEASE.py
+- **Step 2**: Initialize input variables into class input init method as None.
+- **Step 3:** Make the inputs into a string and setText() them to an attribute if those attributes are not None so that you can call them out for a future functionality (being that para kapag nag-back ung user after pressing Ease It!, mareretain ung info na nilagay niya).
+  
+  Format Basis:
+  if data_list is not None and selected is not None:
+            self.ui.quartiledataset.setText(" ".join(str(val) for val in data_list))
+            self.ui.customquartile.setCurrentText(selected)
+            
+- **Step 4:** Store the input attributes into a variable in another class called gotoquartileresult or something. If it is a combo box, .currentText() to access the intputs. If QLineEdit, .text(). This is the part where you c
+- **Step 5:** Error Checking is also set in gotoquartileresult. In order to show the error, do:
+  
+  self.show_error("Enter Message Here)
+...afterwards, the show_error method (which talks with the show_error.py, Error() class) will do all of the work of showing your error message.
+
+- **Step 6:** In the same method (gotoquartileresult), make an instance of the statistics result (QuartileResult) and set it up as such:
+
+toquartileresult = QuartileResult(self.widget, # insert variables that contain the inputs)
+        self.widget.addWidget(toquartileresult)
+        self.widget.setCurrentIndex(self.widget.currentIndex() + 1)
+
+Note: The toquartileresult variable is called out by the self.easeit.clicked.connect(self.gotoquartileresult) so that when easeit is clicked, it does the calculation and then calls the QuartileResult() through the instance toquartileresult.
+
+- **Step 7:** Go to your result class (QuartileResult) and set the parameters of the init method to the variables of the inputs in the gotoquartileresult method. 
+
+- **Step 8:** Edit backend so that the graph will show properly. Its either you use that method of Lian or plt.show(). Do this in another method where it will show all of the results (show_quartile_result).
+  
+	LIAN'S METHOD
+	- Bahala na, I'll wing this part HAHAHAH
+
+- **Step 9:** In the results method (show_quartile_result), use .setText() for the attribute shown in the separate GUI python file for your statistics result to show the output calculation. In the case of the example, quartilevalue and summary attributes from QuartileResult were utilized.
+
+- **Step 10:** Saving the input values. 
+  
+def back(self):
+        goback = Quartile(self.widget, insert attributes of inputs)
+        self.widget.addWidget(goback)
+        self.widget.setCurrentIndex(self.widget.currentIndex() + 1)
+
+def gotoeaseitagain(self):
+        toeaseitagain = Quartile(self.widget, insert attributes of inputs)
+        self.widget.addWidget(toeaseitagain)
+        self.widget.setCurrentIndex(self.widget.currentIndex() + 1)
