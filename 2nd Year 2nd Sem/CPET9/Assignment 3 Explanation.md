@@ -81,4 +81,148 @@ MAIN PROC
     **JC invalid_input** calls the procedure str_to_num which is a procedure that does that actual conversion of string characters to numbers, checking of stuff, calculation and all. These will be explained later. If may problema sa flag register whcih means may nangyaring mali sa solving, it will go to invalid_input label which will be explained later as to what it does.
 
 # print_loop
+mov cx, 1
+-     CMP CX, number
+    JA end_program
+    
+    MOV AX, CX
+    CALL print_num
+    
+    MOV AH, 2
+    MOV DL, ' '
+    INT 21h
+    
+    ADD CX, 2
+    JMP print_loop
+
+- **mov cx,1** 
+  **CMP CX, number**
+    **JA end_program** apparantely number is ung converted string to interger input ng user.  Cx is initialized as 1 since all odd numbers start from 1 then icocompare natin si cx sa number. If cx is above the number input ng user, go to label end_program which ultimately ends the program. This makes sense kasi bakit ka magpapatuloy na mag print ng odd numbers if ung counter odd number mo has exceeded the number the user has inputted. moving on, si cx nilagay natin sa ax and the print_num procedure is called which will be explained later.
+
+- **MOV AH, 2**
+    **MOV DL, ' '**
+    **INT 21h** spaces is print after printing the odd interger.
+
+- **ADD CX, 2**
+    **JMP print_loop** cx is added by two kasi ganun ung increment ng mga odd numbers then it loops back to the start of print_loop hanggang sa mag greater than si cx kesa kay number variable.
+
+# Error Handling
+- empty_input:
+    MOV AH, 9
+    LEA DX, empty_msg
+    INT 21h
+    JMP end_program
+    
+invalid_input:
+    MOV AH, 9
+    LEA DX, invalid_msg
+    INT 21h
+    JMP end_program
+    
+end_program:
+    MOV AX, 4C00h
+    INT 21h
+MAIN ENDP
+
+- **empty_input:**
+    **MOV AH, 9**
+    **LEA DX, empty_msg**
+    **INT 21h**
+    **JMP end_program** prints that there is an empty input then goes to end_program.
+
+- **invalid_input:**
+    **MOV AH, 9**
+    **LEA DX, invalid_msg**
+    **INT 21h**
+    **JMP end_program** activates when there is an invalid input such as character input or decimal input that has exceeded 16 bits. 
+
+**end_program:**
+    **MOV AX, 4C00h**
+    **INT 21h**
+**MAIN ENDP** ends the procedure and the program itself and returns the control back to the OS.
+
+# str_to_num
+str_to_num PROC
+    PUSH AX
+    PUSH BX
+    PUSH CX
+    PUSH DX
+    PUSH SI
+    
+    LEA SI, buffer + 2
+    
+    XOR AX, AX
+    MOV BL, buffer[1]
+    XOR BH, BH
+    
+    CMP BL, 0
+    JE conversion_error
+    
+    MOV CL, BL
+    XOR CH, CH
+
+- **str_to_num PROC**
+    **PUSH AX**
+    **PUSH BX**
+    **PUSH CX**
+    **PUSH DX**
+    **PUSH SI** initializes the str_to_num procedure. Afterwards it pushes the current values ng AX, BX, CX, DX and SI sa stack. This is done mainly because if there are values sa general registers natin and we want to utilizes those registers with values into another procedure, the procedure does that job. Nag cacarry over siya kumbaga.
+
+- **LEA SI, buffer + 2** si buffer[2] which contains the first character sa string number input ng user will be stored sa SI.
+
+- **XOR AX, AX**
+    **MOV BL, buffer[1]**
+    **XOR BH, BH**
+    
+    **CMP BL, 0**
+    **JE conversion_error**  xor ax, ax initializes the ax to be zero. Parehas lang siya sa mov ax, 0. Mas maangas lang siya gamitin. (Remember na sa xor, kapag parehas, 0, kapag magkaiba ng logic, 1. So in this case, value ng register sa sarili niyang value= 0). si mov bl, buffer [1] which containes the user input character string count is moved to bl. Si bh naman ay ininitialize as 0 through xor bh, bh. Remember na a general register contains high and low (in thise case bh and bl) and there are certain functions in assembly na general register ang kailangan gamitin to function. By setting bh to zero and bl sa buffer [1], magagamit natin ung bx that contains the value of buffer 1 to our liking. Anw , cmp bl, 0 states na if ung bl natin is zero or no input (empty) mag aactivate ung label conversion_error.
+
+- **MOV CL, BL**
+    **XOR CH, CH** bl goes to cl then initialize ch to 0 para magamit ung CX ng maayos which contains the value of buffer [1].
+
+# process_char
+- process_char:
+    MOV BL, [SI]
+    
+    CMP BL, '0'
+    JB conversion_error
+    CMP BL, '9'
+    JA conversion_error
+    
+    SUB BL, '0'
+    XOR BH, BH
+    
+    CMP AX, 6554
+    JAE conversion_error
+    
+    CMP AX, 6553
+    JNE no_special_check
+    
+    CMP BL, 5
+    JA conversion_error
+    
+- **process_char:**
+    **MOV BL, [SI]**
+    
+    **CMP BL, '0'**
+    **JB conversion_error**
+    **CMP BL, '9'**
+    **JA conversion_error** ung SI natin which contains buffer [2] or the first string character number ni user ay ilalagay natin sa BL. if ung bl natin ay below string 0 or above string 9, aactivate ung conversion_error label. If that is not the case naman and whithin number range. Subtract bl to '0' or 48 in decimal or 30h sa hexadecimal para maging actual decimal number si buffer [2].  Then para maayos and maliis si bx, linisin natin siya through xor bh bh since bl now contains the actual decimal number in buffer [2]. if ax is above or equal 6554, go to conversion_error. 6554 kasi it is to prevent overflow. Kapag 6554 and above is multiplied by 10, it exceeds 65535 which is more than 16 bits, more than the ax register can handle. Ganun din ung case sa cmp ax, 6553 pero it would go to no_special_check if ax not equal to 6553. pero kapag equal ax sa 6553 which would be a special case, it would check if bl is greater than 5 and if that is the case, mag cacause sya ng overflow where in gagamitan natin ng conversion error. 
+
+# no_special_check
+- PUSH BX
+    MOV BX, 10
+    MUL BX
+    POP BX
+    
+    ADD AX, BX
+    JC conversion_error
+    
+    INC SI
+    LOOP process_char
+    
+    MOV number, AX
+    CLC
+    JMP end_conversion
+
 - 
