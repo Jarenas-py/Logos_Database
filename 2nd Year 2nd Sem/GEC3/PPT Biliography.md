@@ -1,0 +1,4 @@
+- _McDonald’s Logo and Its History_. (n.d.). logomyway. https://blog.logomyway.com/mcdonalds-logo-history/
+- Horner, S. (2021, October 21). _Bill Clinton & sepsis: Everything you need to know_. End Sepsis. https://www.endsepsis.org/2021/10/21/bill-clinton-sepsis-everything-you-need-to-know/
+- Oxford University Press. (n.d.). Globalization, n. In Oxford English dictionary. Retrieved May 21, 2025, from https://doi.org/10.1093/OED/1404426084
+- _Globalization_. (n.d.). Cambridge Dictionary | English Dictionary, Translations & Thesaurus. https://dictionary.cambridge.org/us/dictionary/english/globalization
