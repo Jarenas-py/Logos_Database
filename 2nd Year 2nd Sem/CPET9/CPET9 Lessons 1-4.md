@@ -12,7 +12,7 @@ INSTRUCTION SETS
 TYPES OF INSTRUCTIONS SETS
 1. CISC (Complex Instruction Set Computer)- From the word complex, each instruction in an instruction set have microcode. Meaning each instruction in CISC are programmable and can do multiple processes. TLDR; Tools in toolbox can do multiple functions.
 
-2. RISC (Reduced Instruction Set Computer)- RISC is an instructions set type that instead of singular instructions in a set being programmable or having microcode, these instructions do a single task only. Furthermor, RISC devices also complete instructions in one clock pulse each. Because of this, the execution of instructions is faster than risc. However, if there is a process that reauires multiple instructions, more registers are needed for RISC as unlike CISC that can do multiple shit in one instruction, RISC must make multiple instructions in order to emulate that since one instruction does a singular task only.
+2. RISC (Reduced Instruction Set Computer)- RISC is an instructions set type that instead of singular instructions in a set being programmable or having microcode, these instructions do a single task only. Furthermor, RISC devices also complete instructions in one clock pulse each. Because of this, the execution of instructions is faster than cisc. However, if there is a process that reauires multiple instructions, more registers are needed for RISC as unlike CISC that can do multiple shit in one instruction, RISC must make multiple instructions in order to emulate that since one instruction does a singular task only.
 
 CATEGORIES OF INSTRUCTION SETS
 - Categories of instruction sets refer to the grouped functionality of each IS.
