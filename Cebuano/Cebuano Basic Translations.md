@@ -23,8 +23,21 @@
 | Almusal              | Pamahaw               |
 | Tanghalian           | Paniudto              |
 | Hapunan              | Panihapon             |
-|                      |                       |
-|                      |                       |
+| Basa                 | Basa                  |
+| Nood                 | Lantaw                |
+| Laro                 | Dula                  |
+| Nagbabasa            | Magbasa               |
+| Naglalaro            | Magdula               |
+| Nanonood             | Maglantaw             |
+| Magbabasa            | Mobasa                |
+| Maglalaro            | Modula                |
+| Manonood             | Molantaw              |
+| Ako                  | ko                    |
+| Nang/ng              | og                    |
+| kog (shortcut)       | ako ng/ako nang       |
+| ngayon               | ron                   |
+| Kanina               | kaganiha/gneha        |
+| Mamaya               | unya/unyang           |
 
 # Phrase/Sentence Translations
 
@@ -46,3 +59,5 @@
 | No problem.                                   | Way sapayan.                                 |
 | Ang liit mo naman Mii.                        | Putot man ka Mii.                            |
 | Hindi pa, pero kakain na ako ngayon.          | Wala pa, mokaon pako ron.                    |
+| Nanonood ako ng The Hobbit ngayon             | Maglantaw ko og the hobbit ron.              |
+| Manonood ako ng The Hobbit mamaya.            | Molantaw ko og the Hobbit unyang.            |
