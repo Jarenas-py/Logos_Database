@@ -5,51 +5,54 @@
 
 # Word Translations
 
-| Filipino/English     | Cebuano               |
-| -------------------- | --------------------- |
-| Maayo                | Good                  |
-| Morning              | Buntag                |
-| Evening              | Gabie                 |
-| Poop                 | Libang                |
-| Nalilito             | Nalibog               |
-| Balls (Male Scrotum) | Lagay                 |
-| Araw                 | Adlaw                 |
-| Hapon                | Hapon                 |
-| Ingat                | Amping                |
-| Kumusta              | Kumusta               |
-| Small (Size)         | Gamay                 |
-| Small (Height)       | Putot                 |
-| Upa                  | Sex (Derogatory Word) |
-| Almusal              | Pamahaw               |
-| Tanghalian           | Paniudto              |
-| Hapunan              | Panihapon             |
-| Basa                 | Basa                  |
-| Nood                 | Lantaw                |
-| Laro                 | Dula                  |
-| Nagbabasa            | Magbasa               |
-| Naglalaro            | Magdula               |
-| Nanonood             | Maglantaw             |
-| Magbabasa            | Mobasa                |
-| Maglalaro            | Modula                |
-| Manonood             | Molantaw              |
-| Ako                  | ko                    |
-| Nang/ng              | og                    |
-| kog (shortcut)       | ako ng/ako nang       |
-| ngayon               | karon                 |
-| Kanina               | kaganiha/ganeha       |
-| Mamaya               | unya/unyang           |
-| Kumusta              | Kumusta               |
-| is/are/ang           | man                   |
-| your                 | imong                 |
-| Pasensya             | Pasensya              |
-| Forgive              | Pasalyo               |
-| Asking               | Mangayo               |
-| Clouds               | Panganod              |
-| Treasures            | Bahandi               |
-| Ikaw                 | Imo                   |
-| Music                | Musika                |
-| Kinig                | Paminaw/Maminaw       |
-| Music                | Sonata                |
+| Filipino/English                    | Cebuano                |
+| ----------------------------------- | ---------------------- |
+| Maayo                               | Good                   |
+| Morning                             | Buntag                 |
+| Evening                             | Gabie                  |
+| Poop                                | Libang                 |
+| Nalilito                            | Nalibog                |
+| Balls (Male Scrotum)                | Lagay                  |
+| Araw                                | Adlaw                  |
+| Hapon                               | Hapon                  |
+| Ingat                               | Amping                 |
+| Kumusta                             | Kumusta                |
+| Small (Size)                        | Gamay                  |
+| Small (Height)                      | Putot                  |
+| Upa                                 | Sex (Derogatory Word)  |
+| Almusal                             | Pamahaw                |
+| Tanghalian                          | Paniudto               |
+| Hapunan                             | Panihapon              |
+| Basa                                | Basa                   |
+| Nood                                | Lantaw                 |
+| Laro                                | Dula                   |
+| Nagbabasa                           | Magbasa                |
+| Naglalaro                           | Magdula                |
+| Nanonood                            | Maglantaw              |
+| Magbabasa                           | Mobasa                 |
+| Maglalaro                           | Modula                 |
+| Manonood                            | Molantaw               |
+| Ako                                 | ko                     |
+| Nang/ng                             | og                     |
+| kog (shortcut)                      | ako ng/ako nang        |
+| ngayon                              | karon                  |
+| Kanina                              | kaganiha/ganeha        |
+| Mamaya                              | unya/unyang            |
+| Kumusta                             | Kumusta                |
+| is/are/ang                          | man                    |
+| your                                | imong                  |
+| Pasensya                            | Pasensya               |
+| Forgive                             | Pasalyo                |
+| Asking                              | Mangayo                |
+| Clouds                              | Panganod               |
+| Treasures                           | Bahandi                |
+| Ikaw                                | Imo                    |
+| Music                               | Musika                 |
+| Nakikinig                           | NaminawPaminaw/Maminaw |
+| Music                               | Sonata                 |
+| Makikinig (you context)             | Maminaw                |
+| Makikinig (Talking to other people) | Paminaw                |
+| Please                              | Palihog                |
 
 # Phrase/Sentence Translations
 
