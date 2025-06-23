@@ -46,6 +46,7 @@
 | Asking               | Mangayo               |
 | Clouds               | Panganod              |
 | Treasures            | Bahandi               |
+| Ikaw                 | Imo                   |
 
 # Phrase/Sentence Translations
 
