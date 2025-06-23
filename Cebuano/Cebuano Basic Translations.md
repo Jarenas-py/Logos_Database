@@ -38,6 +38,14 @@
 | ngayon               | ron                   |
 | Kanina               | kaganiha/gneha        |
 | Mamaya               | unya/unyang           |
+| Kumusta              | Kumusta               |
+| is/are/ang           | man                   |
+| your                 | imong                 |
+| Pasensya             | Pasensya              |
+| Forgive              | Pasalyo               |
+| Asking               | Mangayo               |
+| Clouds               | Panganod              |
+| Treasures            | Bahandi               |
 
 # Phrase/Sentence Translations
 
@@ -61,3 +69,8 @@
 | Hindi pa, pero kakain na ako ngayon.          | Wala pa, mokaon pako ron.                    |
 | Nanonood ako ng The Hobbit ngayon             | Maglantaw ko og the hobbit ron.              |
 | Manonood ako ng The Hobbit mamaya.            | Molantaw ko og the Hobbit unyang.            |
+| How are you?                                  | Kumusta man ka?                              |
+| How's your day?                               | Kumusta man imong adlaw?                     |
+| How have you been?                            | Kumusta naman ka? (Expressive/Rarely used)   |
+| I am asking for forgiveness.                  | Mangayo ko og pasaylo.                       |
+| Forgive me for what I have done.              | Pasaylo a ko sa akong nabuhat.               |
