@@ -35,7 +35,7 @@
 | Ako                  | ko                    |
 | Nang/ng              | og                    |
 | kog (shortcut)       | ako ng/ako nang       |
-| ngayon               | ron                   |
+| ngayon               | karon                 |
 | Kanina               | kaganiha/ganeha       |
 | Mamaya               | unya/unyang           |
 | Kumusta              | Kumusta               |
@@ -47,6 +47,9 @@
 | Clouds               | Panganod              |
 | Treasures            | Bahandi               |
 | Ikaw                 | Imo                   |
+| Music                | Musika                |
+| Kinig                | Paminaw/Maminaw       |
+| Music                | Sonata                |
 
 # Phrase/Sentence Translations
 
@@ -67,11 +70,13 @@
 | Maraming salamat.                             | Daghang salamat.                             |
 | No problem.                                   | Way sapayan.                                 |
 | Ang liit mo naman Mii.                        | Putot man ka Mii.                            |
-| Hindi pa, pero kakain na ako ngayon.          | Wala pa, mokaon pako ron.                    |
-| Nanonood ako ng The Hobbit ngayon             | Maglantaw ko og the hobbit ron.              |
+| Hindi pa, pero kakain na ako ngayon.          | Wala pa, mokaon pako karon.                  |
+| Nanonood ako ng The Hobbit ngayon             | Maglantaw ko og the hobbit karon.            |
 | Manonood ako ng The Hobbit mamaya.            | Molantaw ko og the Hobbit unyang.            |
 | How are you?                                  | Kumusta man ka?                              |
 | How's your day?                               | Kumusta man imong adlaw?                     |
 | How have you been?                            | Kumusta naman ka? (Expressive/Rarely used)   |
 | I am asking for forgiveness.                  | Mangayo ko og pasaylo.                       |
 | Forgive me for what I have done.              | Pasaylo a ko sa akong nabuhat.               |
+| I'll be taking my leave.                      | Mo adto nako.                                |
+| I'm listening to music./I'm playing a song.   | Nagpa sonata ko.                             |
