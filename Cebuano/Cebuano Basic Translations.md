@@ -36,7 +36,7 @@
 | Nang/ng              | og                    |
 | kog (shortcut)       | ako ng/ako nang       |
 | ngayon               | ron                   |
-| Kanina               | kaganiha/gneha        |
+| Kanina               | kaganiha/ganeha       |
 | Mamaya               | unya/unyang           |
 | Kumusta              | Kumusta               |
 | is/are/ang           | man                   |
