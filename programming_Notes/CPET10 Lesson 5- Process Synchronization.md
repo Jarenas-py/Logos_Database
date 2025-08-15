@@ -1,0 +1,1 @@
+- Process synchronization is the coordination and control of different processes given a multi-processing system. It is basically the different mechanisms set in place by the OS in managing processes that are running at the same time and how they schedule those processes in order for resources to be utilized properly. 
