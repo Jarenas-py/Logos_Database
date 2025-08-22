@@ -110,3 +110,95 @@ MICROPROCESSOR DEVELOPMENT PROCESSES (INTEL I5 2ND GEN)
 11. DIE - refers to multiple chips. A wafer does not equate to 1 processor chip. Marami sila kaya they are cut into smaller pieces and yun na yung mismong processor chip mo.
 
 12. BINNING - Not all chips perform the same. The Binning process refers to the classification of chips based on their performance during the functionality test. If it performs well, then it is sold as a high end processor. If otherwise, budget option or ultimately "binned."
+
+
+MICROPROCESSOR CLASSIFICATIONS 
+
+A. ACCORDING TO DESIGN
+    1. Microprocessor - Basically a CPU
+    2. Microcontrolller Unit (MCU)- Specially designed microprocessor used for MCU's such as embedded system. They were built not for performance but to accomplish a specific task depending on the use of the embedded system in question. It follows the Harvard Architecture and integrtates CPU, RAM, I/O and more on one singular microprocessor.
+    3. Power PC- RISC Desktop Computer developed by Apple, Motorola, and IBM.
+
+B. ACCORDING TO STANDARD SIZE
+    1. 8 Bits 
+    2. 16 Bits
+    3. 32 Bits
+    4. 64 Bits
+
+C. ACCORDING TO INSTRUCTION
+    1. RISC (Reduced Instruction Set Computer)- RISC is an instructions set type that instead of singular instructions in a set being programmable or having microcode, these instructions do a single task only. Furthermor, RISC devices also complete instructions in one clock pulse each. Because of this, the execution of instructions is faster than cisc. However, if there is a process that reauires multiple instructions, more registers are needed for RISC as unlike CISC that can do multiple shit in one instruction, RISC must make multiple instructions in order to emulate that since one instruction does a singular task only.
+        -  Data segment of an instruction is 8 bits wide but instruction is more than that but instructions occupy one word in the memory.
+    2. CISC (Complex Instruction Set Compute)- From the word complex, each instruction in an instruction set have microcode. Meaning each instruction in CISC are programmable and can do multiple processes. TLDR; Tools in toolbox can do multiple functions.
+        - Both data and instruction segment is 8 bits wide.
+
+D. ACCORDING TO PURPOSE
+    1. General Purpose - Home Desktop Computers
+    2. Special Purpose- MCUs and Embedded Systems
+
+MICROPROCESSOR ARCHITECTURE
+
+1. Von Neumman Architecture- A computer architecture formulated by John Von Neumman. It follows the stored-program model which means computers can be programmed and modified to do tasks and rewrite them again to do new tasks instead of fixed program computers such as calculators.
+        - Basically Modern computers. Read CPET9 Lessons 1-4.md for more precise information.
+        - Another thing to take note of is that data (variables and values), as well as instructions (code), are stored in one singular memory. However because of this, there is only one bus for transmission of data and instructions. What this entails is that a CPU cannot read data and write data at the same time. This phenomena is called the Von Neumann Bottleneck. Mitigations such as prefetching, Caches in the microprocessor itself and Pipelining have been made in order to mitigate the problem.
+        - Also follows the Fetch-Decode-Execute Model. Read CPET9 lessons 1-4.md for more information.
+
+2. Harvard Architecture- Harvard Architecture is the direct counter to the problems of the Von Neumman Architecture.
+        - It's model is directly inspired from the Harvard Mark 1 (1940) where in instructions are feeded through punch cards while data is on a separate mechanical channel.
+        - The Harvard Architecture is a computer model wherein instead of the data and the instruction being stored on a singular memory space, it is separated respectively. With the data and the instruciton both having their respective memory channels, they also have their own data busses towards the CPU of a given microcontroller/microcomputer. 
+        - Because of this, executing + fetching instructions as well as reading and writing data can be done all at the same time. Furthermore, because data and instruction are now separate, the possibility of data corruption is reduced significantly.
+        - With this however, the architecture itself is complex and more complex since it requires more data busses for the separate memory channels for data and instruction.
+
+MICROPROCESSOR OPERATION
+- Remember the processor structure on an Intel 8086? Apparently, 'yun ang basic structure ng isang microprocessor.
+- Today's processor architecture has a different structure in mind with more focus on pipelining for more efficiency
+
+1. Bus Unit- Fetches instructions and data from memory and I/O
+
+2. Instruction Cache- It is where instructions are stored for easy fetching. Especially yung mga instructions na usually utilized, it is stored here 
+
+3. Pre-Fetch Unit- Fetches instructions in the instruction queue or Bus Unit. Think of it as the Instruction queue in BIU.
+
+4. Decode Unit- When Instructions are to be fetched na to the control unit, it is first decoded into machine language. 
+
+5. Control Unit- Directs flow inside CPU. Alam mo na yan.
+
+6. Data Cache- Stores data here for future use. 
+
+7. ALU- Alam mo na yan
+
+8. General Regsiter- Alam mo na yan
+
+MICROPROCESSOR OPERATION PROCESS EXAMPLE
+
+- Let's take 3 + 1=. First may input na 3. Pupunta siya muna sa bus unit from the input then memory. Then it will go to the pre-fetch unit and if it is a reoccuring instruction, then isstore muna siya sa instruciton cache for further notice. If the instruction is then needed for execution, it will first go to the decode unit to become machine language. Then the instruction is first stored in the data cache. Next is the input 1. Same process sa 3. Then the "+." It goes to the bus unit first, then to the prefetch unit, then to the decode unit to be translated into machine instruction, then it then fetches 3 and 1 that are stored in the data cache then goes to the ALU to add both. Since wala pang prompt for =, isstore muna siya sa AX general register (Accumulator). Afterwards, papasok si "=". Same process up until the Accumulator register kasi once na pumasok si =, the output will then go to the bus unit then pupunta na yung result sa ouput.
+
+V. MICROCONTROLLER
+- Microcontrollers refer to a single chip that is basically a computer itself. Meaning that this single chip has a micro processor, an I/O, memory and RAM all into a single packed chip.
+
+DIFFERENCED BETWEEN MICROCONTROLLER AND MICROPROCESSOR
+- Microprocessor is more expensive than microcontroller since nasa microcontroller na ang lahat while sa microprocessor, bibili ka pa ng ibang components just to create something na similar in function and operation sa microcontroller.
+- Microprocessor is CPU on a chip while microcontroller is a complete computer on a chip. 
+- Microprocessor was faster in frequency than the processor found in a microcontroller.
+
+VI. TECHNOLOGICAL TRENDS
+1. Moore's Law- by Gordon Moore (1965) simply states that every year, transistors in a single microprocessor doubles at the same price.
+
+2. Gene's Law- by Gene Frantz (2009) stacks upon Moore's law na apart from transistors increasing every year, power dissipation is reduced by a half every year din. This means less heat generated by the operations of a processor by half according to this law.
+
+3. MultiCore Designs- Basically processors that have 2 or more cores. 
+
+4. Speed- known as clock rate which refers to the executions per clock pulse which is expressed in Hz. On modern processors, it is now expressed in GHz dahil sobrang bilis. There is also a direct relationship between year of development and increase in clock speed of processors just like moore's law.
+
+5. Memory Cache- Basically data and instruction cache in a microprocessor. It is said na more memory cache is made with the improvement of processors throughout the years. 
+
+6. Process Technology- Sinasabi lang dito na as years go by, microprocessors' size shrinks each year. 
+
+VII. MARKET STATISTICS
+- Bahala na 'yan.
+
+VIII. MICROPROCESSOR AND MICROCONTROLLER APPLICATIONS
+
+1. Microprocessors- basta desktop computers.
+2. Microcontrollers- basta embedded and portable systems that do specific functions only.
+
+
