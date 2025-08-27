@@ -13,7 +13,6 @@ Open up chatgpt and search industry 4.0 and 5.0
 - glexible iterative approach. 
 
 3. Sustainability and Green Engineering
-Sustainability in engineering management focuses on creating solutions that meet today’s needs without harming future generations. This means engineering projects are designed to minimize waste, save energy, and use eco-friendly materials. Managers now consider the environmental impact of their decisions, from manufacturing processes to supply chains, ensuring projects contribute to both business goals and environmental protection.
 
 Chair, plastic, destructive
 Sustainability in engineering mangaemeng does not only mean na magaaccomplish kayo ng projects ,but also consider  the environmental sustainability for the benefit of future generations.
