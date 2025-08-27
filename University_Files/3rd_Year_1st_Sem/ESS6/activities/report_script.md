@@ -15,7 +15,12 @@ Open up chatgpt and search industry 4.0 and 5.0
 3. Sustainability and Green Engineering
 Sustainability in engineering management focuses on creating solutions that meet today’s needs without harming future generations. This means engineering projects are designed to minimize waste, save energy, and use eco-friendly materials. Managers now consider the environmental impact of their decisions, from manufacturing processes to supply chains, ensuring projects contribute to both business goals and environmental protection.
 
-It emphasizes pollution prevention, resource efficiency, and the use of renewable energy in engineering solutions. For managers, this trend means integrating green technologies and standards into projects to make operations not only cost-effective but also environmentally responsible.
+Chair, plastic, destructive
+Sustainability in engineering mangaemeng does not only mean na magaaccomplish kayo ng projects ,but also consider  the environmental sustainability for the benefit of future generations.
+
+Bilang mga future engineers
+minimize waste and use eco fritnedly materials. Balik sa chair
 
 4. Remote work collaboration
-Remote work collaboration is now a major trend in engineering management due to advancements in digital tools and global teamwork. Engineering managers must lead teams that may be spread across different locations by using project management software, video conferencing, and cloud-based platforms. This trend allows projects to tap into global talent, reduce costs, and maintain productivity while ensuring effective communication and collaboration despite physical distance.
+
+Remote work collaboration one of the more recent treds in engineering management ever since the advent of the pandemic.Future engineering managers are expected to utilize project management software, video conference apps, and cloud based platforms. This allows to tap into global talent and leding them through it
