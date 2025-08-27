@@ -23,3 +23,10 @@ minimize waste and use eco fritnedly materials. Balik sa chair
 4. Remote work collaboration
 
 Remote work collaboration one of the more recent treds in engineering management ever since the advent of the pandemic.Future engineering managers are expected to utilize project management software, video conference apps, and cloud based platforms. This allows to tap into global talent and leding them through it
+
+Now na alam na ang trnds
+
+Do you have what it takes to be an engineering manager?
+DO YOU HAVE WHAT IT TAKES TO BE A PART OF OUR ORGANIZATION?
+
+Makikita natin 'yan sa ating mga top performing interns naiaaccept namin sa aming engineering organization.
