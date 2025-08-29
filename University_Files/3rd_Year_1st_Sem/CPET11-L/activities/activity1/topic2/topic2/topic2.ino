@@ -19,7 +19,7 @@ void loop()
 {
   if (digitalRead(3)==HIGH){
     t++;
-    delay(100);
+    delay(30);
   }
     
 if (t==1){
