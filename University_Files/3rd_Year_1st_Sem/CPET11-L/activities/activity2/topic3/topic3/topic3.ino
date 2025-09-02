@@ -1,85 +1,61 @@
-// Segment pins (a-g)
-int segPins[7] = {8, 7, 6, 5, 4, 3, 2};
-// Digit select pins (common cathodes)
-int digitPins[4] = {9, 10, 11, 12};  // left → right
-// Buttons
-int btnUp = A0;
-int btnDown = A1;
+// Pin mapping for the two digits
+int leds_Uno[] = {2, 3, 4, 5, 6, 7, 8};     // First digit (units)
+int leds_Dos[] = {22, 23, 24, 25, 26, 27, 28}; // Second digit (tens)
 
-// Digit patterns for 0-9 (abcdefg)
-byte numbers[10] = {
-  B1111110, // 0
-  B0110000, // 1
-  B1101101, // 2
-  B1111001, // 3
-  B0110011, // 4
-  B1011011, // 5
-  B1011111, // 6
-  B1110000, // 7
-  B1111111, // 8
-  B1111011  // 9
+int button_Uno = 9;   // decrement button
+int button_Dos = 10;  // increment button
+
+int number = 0; // 0–99 counter
+
+// Digit patterns for common cathode 7-seg display (a–g)
+// 1 = segment ON, 0 = OFF
+int digits[10][7] = {
+  {1,1,1,1,1,1,0}, // 0
+  {0,1,1,0,0,0,0}, // 1
+  {1,1,0,1,1,0,1}, // 2
+  {1,1,1,1,0,0,1}, // 3
+  {0,1,1,0,0,1,1}, // 4
+  {1,0,1,1,0,1,1}, // 5
+  {1,0,1,1,1,1,1}, // 6
+  {1,1,1,0,0,0,0}, // 7
+  {1,1,1,1,1,1,1}, // 8
+  {1,1,1,1,0,1,1}  // 9
 };
 
-int counter = 0;
-
-// Button debounce tracking
-unsigned long lastPressUp = 0;
-unsigned long lastPressDown = 0;
-const int debounceDelay = 200; // ms
-
-// For display multiplexing
-int currentDigit = 0;
-
 void setup() {
-  for (int i = 0; i < 7; i++) pinMode(segPins[i], OUTPUT);
-  for (int i = 0; i < 4; i++) {
-    pinMode(digitPins[i], OUTPUT);
-    digitalWrite(digitPins[i], HIGH); // OFF initially
+  for (int i = 0; i < 7; i++) {
+    pinMode(leds_Uno[i], OUTPUT);
+    pinMode(leds_Dos[i], OUTPUT);
   }
-  pinMode(btnUp, INPUT_PULLUP);
-  pinMode(btnDown, INPUT_PULLUP);
+
+  pinMode(button_Uno, INPUT_PULLUP); // use pull-ups
+  pinMode(button_Dos, INPUT_PULLUP);
 }
 
-// Display one digit
-void showDigit(int num, int digit) {
-  // Turn all digits off
-  for (int i = 0; i < 4; i++) digitalWrite(digitPins[i], HIGH);
-
-  // Set segments
+void displayDigit(int pins[], int digit) {
   for (int i = 0; i < 7; i++) {
-    digitalWrite(segPins[i], (numbers[num] >> (6 - i)) & 1);
-  }
-
-  // Enable this digit (LOW = ON for CC)
-  digitalWrite(digitPins[digit], LOW);
+    digitalWrite(pins[i], digits[digit][i]);
+  } 
 }
 
 void loop() {
-  unsigned long now = millis();
-
-  // Handle button presses (non-blocking)
-  if (digitalRead(btnUp) == LOW && (now - lastPressUp > debounceDelay)) {
-    counter++;
-    if (counter > 99) counter = 0;
-    lastPressUp = now;
-  }
-  if (digitalRead(btnDown) == LOW && (now - lastPressDown > debounceDelay)) {
-    counter--;
-    if (counter < 0) counter = 99;
-    lastPressDown = now;
+  // Button Uno: decrement
+  if (digitalRead(button_Uno) == LOW) {  // active low with INPUT_PULLUP
+    number--;
+    if (number < 0) number = 99;
+    delay(250); // debounce
   }
 
-  // Break number into digits
-  int tens = (counter / 10) % 10;
-  int ones = counter % 10;
-
-  // --- Multiplex display ---
-  if (currentDigit == 0) {
-    showDigit(tens, 2);   // tens on 3rd position
-  } else if (currentDigit == 1) {
-    showDigit(ones, 3);   // ones on 4th position
+  // Button Dos: increment
+  if (digitalRead(button_Dos) == LOW) {
+    number++;
+    if (number > 99) number = 0;
+    delay(250); // debounce
   }
 
-  currentDigit = (currentDigit + 1) % 2; // alternate
-  delay(3); // short refresh delay
+  int tens = number / 10;
+  int ones = number % 10;
+
+  displayDigit(leds_Uno, ones);
+  displayDigit(leds_Dos, tens);
 }
