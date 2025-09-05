@@ -31,4 +31,8 @@ as a reference on how much time has passed. Ito yung basehan ng "delay" sa ating
 7. PWM Pins.
 8. Interrupt and wake-up. Alam mo na yung mga interrupts. The wake-up feature wakes the microcontroller on minute events such as uploads or the press of a button. Si arduino kasi pumupunta sa low power mode after a certain period of time na idle siya.
 
-
+D. ATMEGA16U2
+- Processor that interfaces with your the USB of the microcontroller in order to talk with the main processor properly. 8 bit and runs on RISC.
+- In system Programming (ISP )Flash- Means that the firmware for interacting with the USB and the main microprocessor is intact. ISP means that the microcontroller is programmable despite everything being soldered in.
+- 512 byte EEPROM and SRAM.
+- Has its own separate clock.
