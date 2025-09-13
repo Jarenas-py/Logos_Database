@@ -1,0 +1,54 @@
+/* Basic reset */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #c3b091;
+    color: #333;
+    margin: 20px;
+    line-height: 1.6;
+}
+
+/* Restaurant name */
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* Section headers */
+h2 {
+    border-bottom: 2px solid #ddd;
+    margin-top: 30px;
+    color: #444;
+}
+
+/* Menu items */
+.menu-item {
+    margin: 15px 0;
+    padding: 10px;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid black;
+}
+
+/* Dish name */
+.menu-item h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #2c3e50;
+}
+
+/* Description */
+.menu-item p {
+    margin: 5px 0;
+    font-size: 0.95em;
+    color: #555;
+}
+
+/* Price */
+.price {
+    display: block;
+    margin-top: 5px;
+    font-weight: bold;
+    color: #27ae60;
+}
