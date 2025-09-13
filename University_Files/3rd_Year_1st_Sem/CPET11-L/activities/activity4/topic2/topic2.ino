@@ -1,0 +1,49 @@
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
+#include <DS1302.h>
+
+// LCD
+LiquidCrystal_I2C lcd(0x27, 20, 4);
+
+// DS1302 pins (CE, IO, SCLK)
+DS1302 rtc(2, 3, 4);
+
+void setup() {
+  lcd.init();
+  lcd.backlight();
+
+  // Uncomment this ONCE to set time, then comment again and re-upload
+  
+  Time t(2025, 9, 2, , 00, 0, Time::kWednesday);
+  rtc.time(t);
+  
+}
+
+void loop() {
+  Time t = rtc.time();   // <-- use Time, not DateTime
+
+  lcd.clear();
+
+  // Line 1: Date (YYYY/MM/DD)
+  lcd.setCursor(0, 0);
+  lcd.print(t.yr);
+  lcd.print("/");
+  if (t.mon < 10) lcd.print("0");
+  lcd.print(t.mon);
+  lcd.print("/");
+  if (t.date < 10) lcd.print("0");
+  lcd.print(t.date);
+
+  // Line 2: Time (HH:MM:SS)
+  lcd.setCursor(0, 1);
+  if (t.hr < 10) lcd.print("0");
+  lcd.print(t.hr);
+  lcd.print(":");
+  if (t.min < 10) lcd.print("0");
+  lcd.print(t.min);
+  lcd.print(":");
+  if (t.sec < 10) lcd.print("0");
+  lcd.print(t.sec);
+
+  delay(1000);
+}
