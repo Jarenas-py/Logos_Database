@@ -50,6 +50,11 @@ Ex. Given a quantitative variable weight of a feather, the measurement or value 
 
 4 SCALES OF MEASUREMENT
 
+1. NOMINAL SCALE- no order.
+2. ORDINAL SCALE- Ranking, percentile, quartile. Gaps are not equal.
+3. INTERVAL SCALE- ordered scale pero no "zero"
+4. RATIO SCALE- ordered scale with true "zero."
+
 
 
 
