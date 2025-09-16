@@ -67,3 +67,81 @@ Christiaan Huygens
 
 Isaac Newton
 - Laws of Motion, Gravity
+
+ENLIGHTENMENT PERIOD
+
+JOHN LOCKE
+
+JEAN-JACQUES ROUSSEAU- social contract that tells everyone that people has the power to govern and that people can only be governed by their own consent.
+
+MARY WOLLSTONECRAFT- argued gendered inequality from social contract. A vidnication if the rights of women which is feminism.
+
+ECONOMY
+
+ADAM SMITH- Wealth if nations and argued mercantilist policies and developed the law if supply and demand. Laizes faire.
+
+ANNE ROBERT JACQUES TURGOT- government shoul have minimal involvement in economics and let people decide on what the market will be.
+
+RELIGION
+- Deism- God is true pero doesnt invomve Himself with humans.
+- Francois-Marie Arouet-proponent if deism.
+
+-Skepticism and David Hume- All human knowledge is gained through experiences. Epiricism.
+
+- ATHEISM- Denis Diderot- No god exists. 
+
+INDUSTRIAL REVOLUTION 
+
+New age of industry- period if major economical and technological change
+- factories and started on britain in the late 1700s. It started on Britain because it was very rich on a lot of resources.
+
+BEFORE THE INDUSTRIAL REVOLUTION
+- occupation is mostly farming and tools were simmple and production was slow.
+- Industrial revolution brought forth more machines that innovated production efficiency.
+
+- Energy sources changed from animal and human power to water, steam and coal power.
+
+INVENTION AND INNOVATIONS
+
+1. Spinning Jenny- Thread machine. Parang Jaquard Loom
+
+2. Power Loom- Mechanized spinning jenny
+
+3. Water frame- spunning jenny pero water powered.
+
+4. James watt's steam engine- Became the heart of factories and ships and trains. Steam powered engine.
+
+5. Bessemer Process- Cheaper steel.
+
+ECONOMIC FEATURE
+- Entrepreneurs invested more 
+- Banks and stock markets became more prevalent 
+- Expandion of global trade
+- People never liked this kaya may socialism
+
+FAMIUSE PEOPLE
+- James Watt- steam engine
+Richard Arkwight
+- George Stephenson-vFirst succesful locomotive
+- Eli Whitney- cotton gin and 
+- Samuel Morse- Telegraph and morae code
+- Henry Bessemer
+- Adam Smith- Free market
+
+SOCIAL AND CULTURAL CHANGES
+- urbanization. millions of people moved from rural villages to industrial cities.
+
+- New social classes- Industrial middle class (bourgeoisie)- factory oweners and merchants, professionals
+- Industry working class (proletariat)- workers, employees, nakakaranas ng unfair treatment
+
+WORKPLACE CONDITION
+- women and children kasama for 12-16 hours per day. Low wages were common and child labor
+
+LABOR MOVEMENTS
+- Demanded labor reforms and better pay and working cpnditions
+
+POSITIVE EFFECTS
+- More goods and lower prices, riae in standards of living. Growth of science and medicine. Expansion of education and literacy
+
+NEGATIVE EFFECT
+- Harsh factory and labor exploitation. Widespread child labor, pollution from coal
