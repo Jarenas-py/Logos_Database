@@ -1,0 +1,65 @@
+@font-face{
+    font-family: 'Roboto';
+    src: url('roboto/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Roboto';
+    src: url('roboto/Roboto-Italic-VariableFont_wdth,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: italic;
+}
+
+@font-face{
+    font-family: 'Outfit';
+    src: url('outfit/Outfit-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+body {
+    font-family: Roboto;
+    background-color: #050645;
+    color: #FFFFFF;
+}
+
+h1{
+    font-family: Outfit;
+}
+
+h2{
+    font-family: Outfit;
+}
+
+h3{
+    font-family: Outfit;
+    line-height: 24px;
+    letter-spacing: 1.5px;
+}
+
+.logo{
+    width: 139px;
+    height: 129px;
+}
+
+.nav_bar{
+    display: flex;
+    padding-top: 41px;
+    padding-left: 428px;
+    padding-right: 427px;
+    gap: 581px;
+}
+
+.inner_nav{
+    display: flex;
+    gap: 52px;
+}
+
+.hero{
+    border: 1px solid #998CDA;
+    height: 523;
+    width: 1065px;
+}
+

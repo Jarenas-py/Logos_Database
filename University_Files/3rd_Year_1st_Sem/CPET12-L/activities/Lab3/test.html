@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Horizontal Layout</title>
+  <style>
+    .container {
+      display: flex;         /* enables flexbox */
+      gap: 20px;             /* spacing between items */
+      justify-content: center; /* centers horizontally */
+      align-items: center;   /* aligns vertically */
+    }
+
+    .box {
+      border: 2px solid #333;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .box img {
+      width: 100px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+      <h2>Header 1</h2>
+      <img src="cat.jpg" alt="Cat">
+    </div>
+    <div class="box">
+      <h2>Header 2</h2>
+      <img src="dog.jpg" alt="Dog">
+    </div>
+    <div class="box">
+      <h2>Header 3</h2>
+      <img src="bird.jpg" alt="Bird">
+    </div>
+  </div>
+</body>
+</html>
