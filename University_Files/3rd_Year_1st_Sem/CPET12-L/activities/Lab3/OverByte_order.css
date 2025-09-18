@@ -1,0 +1,255 @@
+/*===============================IMPORTED FONT FAMILIES==============================*/
+@font-face{
+    font-family: 'Roboto';
+    src: url('roboto/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Roboto';
+    src: url('roboto/Roboto-Italic-VariableFont_wdth,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: italic;
+}
+
+@font-face{
+    font-family: 'Outfit';
+    src: url('outfit/Outfit-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+/*=============================GENERAL STUFF======================================*/
+body {
+    font-family: Roboto;
+    background-color: #050645;
+    color: #FFFFFF;
+    font-size: 18px;
+    line-height: 27.5px;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+h1{
+    font-family: Outfit;
+    font-weight: bold;
+    font-size: 55px;
+    line-height: 51px;
+}
+
+h2{
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 2.5px;
+}
+
+h3{
+    font-family: Outfit;
+    line-height: 24px;
+    letter-spacing: 1.5px;
+}
+
+* {
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+}
+
+/*================================NAVIGATION BAR SECTION===========================*/
+
+.logo{
+    width: 139px;
+    height: 129px;
+}
+
+.nav_bar{
+    display: flex;
+    padding-top: 41px;
+    padding-left: 428px;
+    padding-right: 300px;
+    gap: 581px;
+}
+
+.inner_nav{
+    display: flex;
+    gap: 52px;
+}
+
+/*=================================HERO SECTION=================================*/
+.hero{
+    display: flex;
+    border: 1px solid rgba(153, 140, 218, 0.57);
+    background: rgba(153, 140, 218, 0.57);
+    border-radius: 50px;
+    width: 1605px;
+    height: 539px;
+    margin-top: 72px;
+    margin-left: 158px;
+    margin-right: 157px;
+    gap: 95px;
+}
+
+/*=============================HERO LEFT SECTION====================================*/
+.hero_left{
+    margin-bottom: 70px;
+    margin-left: 101px;
+}
+
+.hero_header h1{
+    font-family: Outfit;
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 80px;
+}
+
+.hero_paragraph{
+    margin-top: -30px;
+}
+
+/*=============================HERO RIGHT SECTION==================================*/
+.hero_right{
+    display: flex;
+    gap: 75px;
+    margin-top: 54px;
+    margin-right: 90px;
+    margin-bottom: 54px;
+}
+
+.nvidia{
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+}
+
+/*============================RTX NVIDIA 5090 SECTION=================================*/
+.black{
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    border: 1px solid black;
+    background: #000000;
+    border-radius: 30px;
+    width: 315px;
+    height: 200px;
+}
+
+.side{
+    display: flex;
+    gap: 24px;
+}
+
+.violet{
+    display: flex;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(to right, #5A539B, #1F1C35);
+    width: 125px;
+    height: 80px;
+    margin-top: 22px;
+    margin-left: 29px;
+    justify-content: center;
+    align-items: center;
+}
+
+.fifty_nine{
+    width: 80px;
+    height: 60px;
+}
+
+.name {
+    margin-top: 10px;
+    width: 121px;
+    height: 60px;
+}
+
+.name h2{
+    line-height: 30px;
+    letter-spacing: 0.5px;
+}
+
+.buy_now{
+    display: flex;
+    border: none;
+    background: linear-gradient(to right, #79AAB7, #5B549D);
+    border-radius: 10px;
+    width: 256px;
+    height: 56px;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-right: 29px;
+}
+
+/*============================RTX NVIDIA 5060 SECTION=================================*/
+
+.fifty_six{
+    width: 115px;
+    height: 65px;
+}
+
+/*==================================AMD RX 9070 XT=========================================*/
+
+.amd{
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+}
+
+.ninety_seven{
+    width: 108px;
+    height: 61px;
+}
+
+.ninety_six{
+    width: 124px;
+    height: 70px;
+}
+
+hr{
+    border: none;
+    margin-top: 108.75px;
+    margin-left: 180px;
+    margin-right: 180px;
+    height: 3px;
+    background: linear-gradient(#655ADF, #98D5D5)
+}
+
+/*====================================FOOTER SECTION====================================*/
+.footer{
+    display: flex;
+    margin-top: 30px;
+    margin-left: 177px;
+    margin-right: 166px;
+    margin-bottom: 55px;
+    justify-content: center;
+    gap: 115px;
+}
+
+.blur{
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    filter: blur(200px);
+    z-index: -1;
+}
+
+.purple{
+    top: -150px;
+    left: -150px;
+    background: #655ADF;
+}
+
+.green{
+    bottom: -250px;
+    right: -250px;
+    background: #98D5D5;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
