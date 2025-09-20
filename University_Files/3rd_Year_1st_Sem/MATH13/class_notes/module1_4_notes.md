@@ -51,7 +51,7 @@ B. Quota Sampling
 C. Purposive Sampling
 - relies on the judgement of reaearcher on who to ask to participate based on purpose.
 
-D. Snowball Sampling- For hard to reach group. Subjects are asked to find more subjecsta 
+D. Snowball Sampling- For hard to reach group. Subjects are asked to find more subjects.
 
 3. DATA COLLECTION METHODS
 - Techniques for gathering data for research purposes.
@@ -66,3 +66,20 @@ C. Observation- watch record stuff on a controlled setting. Can be participant o
 D. Experiment- manipulate variables under controlled conditions to observe their effects.
 
 
+
+QUESTIONS:
+2. IDE they use
+5. What features of this IDE do you find most useful (e.g., debugging, syntax highlighting, integrations)?
+6. How easy was it for you to learn and start using your preferred IDE?
+
+Very easy
+
+Easy
+
+Moderate
+
+Difficult
+
+
+Why do we want to know the preferred ide of aforementioned students?
+we use this research to know the best IDE in terms of features that is beginner friendly and such

@@ -21,7 +21,7 @@ void setup() {
   rtc.writeProtect(false); 
   rtc.halt(false);        
 
-  Time t(2025, 9, 14, 2, 46, 0, Time::kSunday);
+  Time t(2025, 9, 19, 19, 00, 0, Time::kFriday);
   rtc.time(t);
 
   pinMode(btnHour, INPUT);
